@@ -21,8 +21,7 @@ Typeface tf = Typeface.CreateFromAsset (Context.Assets, "fonts/samplefont.ttf");
 
 ================================================================================================
 
-
-Avoiding Image OutOfMemoryException and Rounded corner ImageBitmap in android xamarin
+Avoiding ImageBitmap OutOfMemoryException and Rounded corner Image in android xamarin
 
 Why rounded corner Image bitmap not Working Properly
 
@@ -79,8 +78,8 @@ image and load smaller version of the image. InSampleSize value varies according
 			RecycleBitmap (imgProfilePic);
 			imgProfilePic.SetImageBitmap ( bitmapRoundedCorner ); 
 		} 
-Step 4: Write back the sampled down Image bitmap to the phone storage[This requires WRITE_EXTERNAL_STORAGE]. Now we can see the optimized image resolution and 
-size. In my phone storage it is showing XXXXX and XXXX
+Step 4: Write back the sampled down Image bitmap to the phone storage[This requires WRITE_EXTERNAL_STORAGE]. 
+Now we can see the optimized image resolution and size. In my phone storage it is showing XXXXX and XXXX
  
 
 
@@ -89,8 +88,9 @@ size. In my phone storage it is showing XXXXX and XXXX
 			BitmapFactory.Options options = new BitmapFactory.Options
 			{
 				InJustDecodeBounds = true //true-avoids memory allocation during decoding
-			}; 
-			 await BitmapFactory.DecodeFileAsync(strFileName, options); // The result will be null because InJustDecodeBounds == true.
+			};
+			 
+			await BitmapFactory.DecodeFileAsync(strFileName, options); // The result will be null because InJustDecodeBounds == true.
 			return options;
 		}
 
@@ -122,19 +122,6 @@ internal static int CalculateInSampleSize(BitmapFactory.Options options, int req
 			return (int)inSampleSize; 
 		} 
 	
-
-
-
-
-
-
-
-
-
- 
-
-
-
 For this we convert image in to a Bitmap using  BitmapFactory class DecodeFile method. 
 
 
@@ -145,9 +132,6 @@ imgProfilePic.Width returns zero until it is drawn fully.
 	     imgProfilePic.SetImageBitmap ( GetRoundedCornerBitmap(bitmap) );
 
 		}
-
-
-
 		// If you would like to create a circle of the image set pixels to half the width of the image.
 		internal static   Bitmap GetRoundedCornerBitmap(Bitmap bitmap, int pixels)
 		{

@@ -901,8 +901,17 @@ namespace RoundedCornerImage
 			// aapt resource value: 0x7f0a0027
 			public const int image = 2131361831;
 			
+			// aapt resource value: 0x7f0a003e
+			public const int imgPerson = 2131361854;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int lblPersonName = 2131361855;
+			
 			// aapt resource value: 0x7f0a0006
 			public const int listMode = 2131361798;
+			
+			// aapt resource value: 0x7f0a003d
+			public const int listViewPerson = 2131361853;
 			
 			// aapt resource value: 0x7f0a0029
 			public const int list_item = 2131361833;
@@ -1102,7 +1111,10 @@ namespace RoundedCornerImage
 			public const int Main = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int support_simple_spinner_dropdown_item = 2130903065;
+			public const int PersonCustomLayout = 2130903065;
+			
+			// aapt resource value: 0x7f03001a
+			public const int support_simple_spinner_dropdown_item = 2130903066;
 			
 			static Layout()
 			{
