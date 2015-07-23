@@ -21,7 +21,11 @@ Typeface tf = Typeface.CreateFromAsset (Context.Assets, "fonts/samplefont.ttf");
 
 ================================================================================================
 
+
+Avoiding Image OutOfMemoryException and Rounded corner ImageBitmap in android xamarin
+
 Why rounded corner Image bitmap not Working Properly
+
 In Brief:
 Circular shaped image display is the common requirment in most of the android application. Here i will write about how to create 
 rounded corner/Circualr Image from the image bitmap and the possible issues with this process.
@@ -36,7 +40,7 @@ Description :
 Let us build one sample application to display image. Here image need to be fetch from SD card/Phone memory.
 
 Whenever we need to load image bitmap to imageview it is must and should to analyse the image dimension and size.
-Image captured from the device camera usually takes high resolution then the screen density and size .
+Image captured from the device camer5a usually takes high resolution then the screen density and size .
 RAM space allocated to the app may not enough to handle it properly which leads to OutOfMemoryException. 
 Loading smaller subsampled version of image is the best approach to solve OutOfMemory issue. Which is to be achieved by reducing 
 Image resolution, As per the xamarin document
