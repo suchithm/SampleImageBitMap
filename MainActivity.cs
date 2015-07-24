@@ -18,7 +18,7 @@ namespace RoundedCornerImage
 			Window.RequestFeature ( Android.Views.WindowFeatures.NoTitle );
 			SetContentView ( Resource.Layout.Main );
 			ImageView imgProfilePic = FindViewById<ImageView> ( Resource.Id.myImg );
-//			BindListView ();  //make listviewvisibility :visible
+			BindListView ();  //make listviewvisibility :visible
 			imgProfilePic.Click += async delegate(object sender , EventArgs e )
 			{  
 				strImgPath = System.IO.Path.Combine ( Android.OS.Environment.ExternalStorageDirectory.AbsolutePath , "Sample" );  
